@@ -1,6 +1,6 @@
 import React from "react";
 
-const Form = () => {
+const Form = (title, setTitle, body, setBody) => {
   return (
     <>
       <div className="container">
@@ -15,15 +15,15 @@ const Form = () => {
                 <div id="errMsg" className="form-text"></div>
               </div>
               <div className="mb-3">
-                <label for="desc" className="form-label">
-                  Description
+                <label for="body" className="form-label">
+                  Body
                 </label>
                 <textarea
-                  name="desc"
-                  id="desc"
+                  name="body"
+                  id="body"
                   rows="3"
                   className="form-control"
-                  placeholder="Enter Note Description"
+                  placeholder="Enter Note Body"
                 ></textarea>
               </div>
               <select id="color" name="color" className="form-select">

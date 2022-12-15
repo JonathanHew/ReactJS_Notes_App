@@ -38,15 +38,15 @@ const Edit = () => {
                   <div id="errMsg" className="form-text"></div>
                 </div>
                 <div className="mb-3">
-                  <label for="editDesc"className="form-label">
-                    Description
+                  <label for="editBody"className="form-label">
+                    Body
                   </label>
                   <textarea
-                    name="editDesc"
-                    id="editDesc"
+                    name="editBody"
+                    id="editBody"
                     rows="3"
                     className="form-control"
-                    placeholder="Enter Note Description"
+                    placeholder="Enter Note Body"
                   ></textarea>
                 </div>
                 <select
