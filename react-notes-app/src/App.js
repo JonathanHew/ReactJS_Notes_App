@@ -9,8 +9,6 @@ const App = () => {
   const [color, setColor] = useState("red");
   const [notes, setNotes] = useState([]);
 
-  console.log(notes)
-
   return (
     <div>
       <Edit></Edit>
@@ -23,12 +21,22 @@ const App = () => {
         setNotes={setNotes}
         color={color}
         setColor={setColor}
-      ></Form>
+      />
       <div className="container mt-5">
         <div className="row justify-content-center">
           <div className="col-md-10">
             <h1>Your Notes</h1>
-            <Notes></Notes>
+            {notes.length === 0 ? (
+              <div className="card-body">
+                <div className="card-body">
+                  <p className="card-text">No notes are available</p>
+                </div>
+              </div>
+            ) : (
+              notes.map((element) => {
+                return <Notes />;
+              })
+            )}
           </div>
         </div>
       </div>

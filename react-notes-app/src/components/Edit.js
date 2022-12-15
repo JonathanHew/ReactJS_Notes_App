@@ -55,10 +55,10 @@ const Edit = () => {
                   className="form-select"
                 >
                   <option value="red" selected>
-                    Red
+                    red
                   </option>
-                  <option value="green">Green</option>
-                  <option value="blue">Blue</option>
+                  <option value="green">green</option>
+                  <option value="blue">blue</option>
                 </select>
               </form>
             </div>

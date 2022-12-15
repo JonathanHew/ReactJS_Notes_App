@@ -7,12 +7,12 @@ const Form = ({title, setTitle, body, setBody, notes, setNotes, color, setColor}
         e.preventDefault();
         setNotes((note) => {
             return(
-                [...note], {
+                [...note, {
                     id: uuid(),
                     title:title,
                     desc: body,
                     color: color
-                }
+                }]
             )
         })
     }
