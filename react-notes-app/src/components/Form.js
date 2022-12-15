@@ -15,6 +15,10 @@ const Form = ({title, setTitle, body, setBody, notes, setNotes, color, setColor}
                 }]
             )
         })
+
+        e.target.reset();
+        setColor("red");
+
     }
 
   return (
