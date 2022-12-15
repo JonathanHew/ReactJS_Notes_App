@@ -36,7 +36,7 @@ const App = () => {
               </div>
             ) : (
               notes.map((element) => {
-                return <Notes element={element} key={element.id}/>;
+                return <Notes element={element} key={element.id} notes={notes} setNotes={setNotes}/>;
               })
             )}
           </div>

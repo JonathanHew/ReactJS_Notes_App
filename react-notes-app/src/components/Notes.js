@@ -1,8 +1,14 @@
 import React from "react";
 
-const Notes = ({ element }) => {
+const Notes = ({ element, notes, setNotes }) => {
   const deleteNote = (id) => {
-    console.log(element.id);
+    const resetNotes = notes.filter((note) => {
+        if(note.id !== id) {
+            return note;
+        }
+    })
+
+    setNotes(resetNotes);
   };
   return (
     <>
