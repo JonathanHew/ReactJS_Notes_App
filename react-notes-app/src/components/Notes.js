@@ -1,12 +1,12 @@
 import React from "react";
 
-const Notes = () => {
+const Notes = ({element}) => {
   return (
     <>
       <div className="card mb-3">
         <div className="card-body">
-          <h5 className="card-title">Note Title</h5>
-          <p className="card-text">Note Desc</p>
+          <h5 className="card-title">{element.title}</h5>
+          <p className="card-text">{element.body}</p>
           <button
             type="button"
             class="btn btn-primary"

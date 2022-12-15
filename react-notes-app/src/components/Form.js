@@ -10,7 +10,7 @@ const Form = ({title, setTitle, body, setBody, notes, setNotes, color, setColor}
                 [...note, {
                     id: uuid(),
                     title:title,
-                    desc: body,
+                    body: body,
                     color: color
                 }]
             )

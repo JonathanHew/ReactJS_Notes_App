@@ -34,7 +34,7 @@ const App = () => {
               </div>
             ) : (
               notes.map((element) => {
-                return <Notes />;
+                return <Notes element={element} />;
               })
             )}
           </div>
