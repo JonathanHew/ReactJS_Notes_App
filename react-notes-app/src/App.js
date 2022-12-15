@@ -1,11 +1,13 @@
 
 import React from 'react'
+import Edit from './components/Edit'
 import Form from './components/Form'
 import Notes from './components/Notes'
 
 const App = () => {
   return (
     <div>
+      <Edit></Edit>
       <Form></Form>
       <div className='container mt-5'>
         <div className='row justify-content-center'>
