@@ -1,10 +1,14 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import Edit from './components/Edit'
 import Form from './components/Form'
 import Notes from './components/Notes'
 
 const App = () => {
+
+  const [title, setTitle] = useState("")
+  const [body, setBody] = useState("")
+
   return (
     <div>
       <Edit></Edit>

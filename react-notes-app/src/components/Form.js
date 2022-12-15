@@ -15,7 +15,7 @@ const Form = () => {
                 <div id="errMsg" className="form-text"></div>
               </div>
               <div className="mb-3">
-                <label for="exampleInputPassword1" className="form-label">
+                <label for="desc" className="form-label">
                   Description
                 </label>
                 <textarea
@@ -26,7 +26,7 @@ const Form = () => {
                   placeholder="Enter Note Description"
                 ></textarea>
               </div>
-              <select id="colorInput" name="colorInput" className="form-select">
+              <select id="color" name="color" className="form-select">
                 <option value="red" selected>
                   Red
                 </option>

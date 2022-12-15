@@ -5,7 +5,7 @@ const Edit = () => {
     <>
       <div
         class="modal fade"
-        id="exampleModal"
+        id="editModal"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
@@ -14,7 +14,7 @@ const Edit = () => {
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Modal title
+                Edit Note
               </h1>
               <button
                 type="button"
@@ -26,32 +26,32 @@ const Edit = () => {
             <div class="modal-body">
               <form>
                 <div className="mb-3">
-                  <label for="title" className="form-label">
+                  <label for="editTitle" className="form-label">
                     Title
                   </label>
                   <input
                     type="text"
                     className="form-control"
-                    id="title"
+                    id="editTitle"
                     placeholder="Enter Note Title"
                   />
                   <div id="errMsg" className="form-text"></div>
                 </div>
                 <div className="mb-3">
-                  <label for="exampleInputPassword1" className="form-label">
+                  <label for="editDesc"className="form-label">
                     Description
                   </label>
                   <textarea
-                    name="desc"
-                    id="desc"
+                    name="editDesc"
+                    id="editDesc"
                     rows="3"
                     className="form-control"
                     placeholder="Enter Note Description"
                   ></textarea>
                 </div>
                 <select
-                  id="colorInput"
-                  name="colorInput"
+                  id="editColor"
+                  name="editColor"
                   className="form-select"
                 >
                   <option value="red" selected>
@@ -60,22 +60,15 @@ const Edit = () => {
                   <option value="green">Green</option>
                   <option value="blue">Blue</option>
                 </select>
-
-                <button type="submit" className="btn btn-primary mt-3">
-                  Add Note
-                </button>
               </form>
             </div>
             <div class="modal-footer">
               <button
                 type="button"
-                class="btn btn-secondary"
+                class="btn btn-primary"
                 data-bs-dismiss="modal"
               >
-                Close
-              </button>
-              <button type="button" class="btn btn-primary">
-                Save changes
+                Save
               </button>
             </div>
           </div>

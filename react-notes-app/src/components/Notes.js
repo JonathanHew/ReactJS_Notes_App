@@ -11,7 +11,7 @@ const Notes = () => {
             type="button"
             class="btn btn-primary"
             data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
+            data-bs-target="#editModal"
           >
             Edit
           </button>
