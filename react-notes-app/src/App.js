@@ -6,6 +6,7 @@ import Notes from "./components/Notes";
 const App = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
+  const [color, setColor] = useState("red");
   const [notes, setNotes] = useState([]);
 
   console.log(notes)
@@ -20,6 +21,8 @@ const App = () => {
         setBody={setBody}
         notes={notes}
         setNotes={setNotes}
+        color={color}
+        setColor={setColor}
       ></Form>
       <div className="container mt-5">
         <div className="row justify-content-center">

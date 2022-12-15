@@ -1,16 +1,17 @@
 import React from "react";
 import {v4 as uuid} from "uuid"
 
-const Form = ({title, setTitle, body, setBody, notes, setNotes}) => {
+const Form = ({title, setTitle, body, setBody, notes, setNotes, color, setColor}) => {
 
     const submit = (e) => {
         e.preventDefault();
         setNotes((note) => {
             return(
                 [...note], {
+                    id: uuid(),
                     title:title,
                     desc: body,
-                    id: uuid()
+                    color: color
                 }
             )
         })
@@ -49,12 +50,12 @@ const Form = ({title, setTitle, body, setBody, notes, setNotes}) => {
                   onChange={(e) => setBody(e.target.value)}
                 ></textarea>
               </div>
-              <select id="color" name="color" className="form-select">
+              <select id="color" name="color" className="form-select" value={color} onChange={(e) => setColor(e.target.value)}>
                 <option value="red" selected>
-                  Red
+                  red
                 </option>
-                <option value="green">Green</option>
-                <option value="blue">Blue</option>
+                <option value="green">green</option>
+                <option value="blue">blue</option>
               </select>
 
               <button type="submit" className="btn btn-primary mt-3">
