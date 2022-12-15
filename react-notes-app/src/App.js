@@ -9,7 +9,7 @@ const App = () => {
   const [color, setColor] = useState("red");
   const [notes, setNotes] = useState([]);
 
-  console.log(title);
+  console.log(notes);
 
   return (
     <div>

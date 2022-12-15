@@ -1,6 +1,9 @@
 import React from "react";
 
-const Notes = ({element}) => {
+const Notes = ({ element }) => {
+  const deleteNote = (id) => {
+    console.log(element.id);
+  };
   return (
     <>
       <div className="card mb-3">
@@ -15,7 +18,14 @@ const Notes = ({element}) => {
           >
             Edit
           </button>
-          <button className="btn btn-danger mx-3">Delete</button>
+          <button
+            className="btn btn-danger mx-3"
+            onClick={() => {
+              deleteNote(element.id);
+            }}
+          >
+            Delete
+          </button>
         </div>
       </div>
     </>
