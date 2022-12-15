@@ -11,7 +11,7 @@ const Form = () => {
                 <label for="title" className="form-label">
                   Title
                 </label>
-                <input type="text" className="form-control" id="title" />
+                <input type="text" className="form-control" id="title" placeholder="Enter Note Title"/>
                 <div id="errMsg" className="form-text"></div>
               </div>
               <div className="mb-3">
@@ -23,6 +23,7 @@ const Form = () => {
                   id="desc"
                   rows="3"
                   className="form-control"
+                  placeholder="Enter Note Description"
                 ></textarea>
               </div>
               <select id="colorInput" name="colorInput" className="form-select">
