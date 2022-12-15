@@ -8,8 +8,7 @@ const App = () => {
   const [body, setBody] = useState("");
   const [color, setColor] = useState("red");
   const [notes, setNotes] = useState([]);
-
-  console.log(notes);
+  const [edit, setEdit] = useState("");
 
   return (
     <div>
@@ -36,7 +35,7 @@ const App = () => {
               </div>
             ) : (
               notes.map((element) => {
-                return <Notes element={element} key={element.id} notes={notes} setNotes={setNotes}/>;
+                return <Notes element={element} key={element.id} notes={notes} setNotes={setNotes} setEdit={setEdit}/>;
               })
             )}
           </div>
