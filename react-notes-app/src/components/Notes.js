@@ -1,6 +1,6 @@
 import React from "react";
 
-const Notes = ({ element, notes, setNotes }) => {
+const Notes = ({ element, notes, setNotes, setEdit }) => {
   const deleteNote = (id) => {
     const resetNotes = notes.filter((note) => {
       if (note.id !== id) {
@@ -9,13 +9,14 @@ const Notes = ({ element, notes, setNotes }) => {
     });
 
     setNotes(resetNotes);
+    setEdit(id);
   };
 
   const editNote = (id) => {
     const editTitle = document.getElementById("editTitle");
     const editBody = document.getElementById("editBody");
     const editColor = document.getElementById("editColor");
-    
+
     notes.filter((note) => {
       if (note.id === id) {
         editTitle.value = note.title;

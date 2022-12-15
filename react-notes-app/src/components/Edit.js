@@ -1,6 +1,6 @@
 import React from "react";
 
-const Edit = () => {
+const Edit = ({edit, notes, setNotes}) => {
   return (
     <>
       <div

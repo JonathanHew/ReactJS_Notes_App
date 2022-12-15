@@ -12,7 +12,7 @@ const App = () => {
 
   return (
     <div>
-      <Edit></Edit>
+      <Edit edit={edit} notes={notes} setNotes={setNotes} />
       <Form
         title={title}
         setTitle={setTitle}
@@ -35,7 +35,15 @@ const App = () => {
               </div>
             ) : (
               notes.map((element) => {
-                return <Notes element={element} key={element.id} notes={notes} setNotes={setNotes} setEdit={setEdit}/>;
+                return (
+                  <Notes
+                    element={element}
+                    key={element.id}
+                    notes={notes}
+                    setNotes={setNotes}
+                    setEdit={setEdit}
+                  />
+                );
               })
             )}
           </div>
