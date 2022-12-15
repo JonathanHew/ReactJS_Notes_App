@@ -1,6 +1,6 @@
 import React from "react";
 
-const Form = ({title, setTitle, body, setBody}) => {
+const Form = ({title, setTitle, body, setBody, notes, setNotes}) => {
 
     const submit = (e) => {
         e.preventDefault();
