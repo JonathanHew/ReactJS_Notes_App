@@ -3,12 +3,26 @@ import React from "react";
 const Notes = ({ element, notes, setNotes }) => {
   const deleteNote = (id) => {
     const resetNotes = notes.filter((note) => {
-        if(note.id !== id) {
-            return note;
-        }
-    })
+      if (note.id !== id) {
+        return note;
+      }
+    });
 
     setNotes(resetNotes);
+  };
+
+  const editNote = (id) => {
+    const editTitle = document.getElementById("editTitle");
+    const editBody = document.getElementById("editBody");
+    const editColor = document.getElementById("editColor");
+    
+    notes.filter((note) => {
+      if (note.id === id) {
+        editTitle.value = note.title;
+        editBody.value = note.body;
+        editColor.value = note.color;
+      }
+    });
   };
   return (
     <>
@@ -21,6 +35,9 @@ const Notes = ({ element, notes, setNotes }) => {
             class="btn btn-primary"
             data-bs-toggle="modal"
             data-bs-target="#editModal"
+            onClick={() => {
+              editNote(element.id);
+            }}
           >
             Edit
           </button>
