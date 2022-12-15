@@ -1,6 +1,22 @@
 import React from "react";
 
 const Edit = ({edit, notes, setNotes}) => {
+
+    const updateNote = () => {
+        const resetNotes = notes.map((note) => {
+            if(edit === note.id) {
+                return ({...note,
+                title : document.getElementById("editTitle").value,
+                body :  document.getElementById("editBody").value,
+                color :  document.getElementById("editColor").value,
+                })
+            }else {
+                return note;
+            }
+        })
+
+        setNotes(resetNotes);
+    }
   return (
     <>
       <div
@@ -67,6 +83,7 @@ const Edit = ({edit, notes, setNotes}) => {
                 type="button"
                 class="btn btn-primary"
                 data-bs-dismiss="modal"
+                onClick={updateNote}
               >
                 Save
               </button>

@@ -9,13 +9,13 @@ const Notes = ({ element, notes, setNotes, setEdit }) => {
     });
 
     setNotes(resetNotes);
-    setEdit(id);
   };
 
   const editNote = (id) => {
     const editTitle = document.getElementById("editTitle");
     const editBody = document.getElementById("editBody");
     const editColor = document.getElementById("editColor");
+    setEdit(id);
 
     notes.filter((note) => {
       if (note.id === id) {
