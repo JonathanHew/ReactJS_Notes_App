@@ -4,38 +4,34 @@ const Form = () => {
   return (
     <>
       <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">
-            Email address
+        <div className="mb-3">
+          <label for="title" className="form-label">
+            Title
           </label>
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
-          <div id="emailHelp" class="form-text">
-            We'll never share your email with anyone else.
-          </div>
+          <input type="text" className="form-control" id="title" />
+          <div id="errMsg" className="form-text"></div>
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">
-            Password
+        <div className="mb-3">
+          <label for="exampleInputPassword1" className="form-label">
+            Description
           </label>
-          <input
-            type="password"
-            class="form-control"
-            id="exampleInputPassword1"
-          />
+          <textarea
+            name="desc"
+            id="desc"
+            rows="3"
+            className="form-control"
+          ></textarea>
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1">
-            Check me out
-          </label>
-        </div>
-        <button type="submit" class="btn btn-primary">
-          Submit
+        <select id="colorInput" name="colorInput" className="form-select">
+          <option value="red" selected>
+            Red
+          </option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+        </select>
+
+        <button type="submit" className="btn btn-primary mt-3">
+          Add Note
         </button>
       </form>
     </>
