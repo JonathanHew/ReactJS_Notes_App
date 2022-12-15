@@ -1,10 +1,19 @@
 import React from "react";
+import {v4 as uuid} from "uuid"
 
 const Form = ({title, setTitle, body, setBody, notes, setNotes}) => {
 
     const submit = (e) => {
         e.preventDefault();
-        console.log(title, body);
+        setNotes((note) => {
+            return(
+                [...note], {
+                    title:title,
+                    desc: body,
+                    id: uuid()
+                }
+            )
+        })
     }
 
   return (

@@ -8,6 +8,8 @@ const App = () => {
   const [body, setBody] = useState("");
   const [notes, setNotes] = useState([]);
 
+  console.log(notes)
+
   return (
     <div>
       <Edit></Edit>
