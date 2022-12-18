@@ -29,9 +29,9 @@ const Edit = ({edit, notes, setNotes}) => {
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">
+              <h2 class="modal-title fs-5" id="exampleModalLabel">
                 Edit Note
-              </h1>
+              </h2>
               <button
                 type="button"
                 class="btn-close"

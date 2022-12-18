@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Edit from "./components/Edit";
 import Form from "./components/Form";
 import Notes from "./components/Notes";
+import './App.css';
 
 const App = () => {
   const [title, setTitle] = useState("");
@@ -12,6 +13,7 @@ const App = () => {
 
   return (
     <div>
+      <h1 className="text-center">Notes App with ReactJS!</h1>
       <Edit edit={edit} notes={notes} setNotes={setNotes} />
       <Form
         title={title}
@@ -26,7 +28,7 @@ const App = () => {
       <div className="container mt-5">
         <div className="row justify-content-center">
           <div className="col-md-10">
-            <h1>Your Notes</h1>
+            <h2>Your Notes</h2>
             {notes.length === 0 ? (
               <div className="card-body">
                 <div className="card-body">
